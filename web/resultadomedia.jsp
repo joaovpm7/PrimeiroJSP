@@ -1,11 +1,10 @@
-<%@page import="java.text.DecimalFormat"%>
+ <%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String not1 = "";
     String not2 = "";
     String not3 = "";
     String not4 = "";
-    
     String naluno = "";
     double msg = 0;
     if (request.getParameter("nota1") != null) { //requisição
@@ -46,10 +45,10 @@
         <br>
         <%
             out.print("Aluno: " + naluno + "<br/>" + "<br/>");
-            out.print("Nota 1:" + not1);
-            out.print("Nota 2:" + not2);
-            out.print("Nota 3:" + not3);
-            out.print("Nota 4:" + not4);
+            out.print("Nota 1: " + not1);
+            out.print("Nota 2: " + not2);
+            out.print("Nota 3: " + not3);
+            out.print("Nota 4: " + not4 + "<br/>");
             DecimalFormat df = new DecimalFormat("0.00");
             out.print("Media Final = " + df.format(msg));
         %>
